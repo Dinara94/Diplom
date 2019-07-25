@@ -1,14 +1,42 @@
 @import '_reset';
+@import '_button';
 
 $color-white: #FFFFFF;
-$color-lght: #f6f9fa;;
+$color-light: #f6f9fa;
 
 .banner {
-	width: 100%;
+	max-width: 1920px;
 	background-image: url("../img/banner.png");
 	background-size: cover;
-	padding: 
+	padding: 60px 350px 280px;
+	font-family: "Proxima Nova";
 
+	.banner_logo {
 
+		margin-bottom: 200px;
 
-}
+		.banner_logo__image, .banner_logo__text {
+			display: inline-block;
+			margin: 10px;
+			font: $color-white 13px;
+			font-weight: 400;
+		}
+
+    .banner_text {
+    	margin-bottom: 35px;
+    	font: $color-light;
+
+    	.banner_text__title {
+
+    		font: "Gotham Rounded" 48px;
+            font-weight: 300;
+
+    	}
+
+    	.banner_text__description {
+    		font-size: 17px;
+            font-weight: 400;
+    	}
+       }
+	  }
+     }
