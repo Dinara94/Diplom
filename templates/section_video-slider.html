@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Slider</title>
+	<link rel="stylesheet" type="text/scss" href="../sass/_reset.scss">
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/video-slider.css">
+</head>
+<body>
+	<section class="slider-section">
+		<h1 class="slider-section_title">Slow Life (Vimeo)</h1>
+		<p class="slider-section_description">
+			Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula eget.
+		</p>
+		<div class="slider-section__slider-container">
+			<div class="slider-section_slider-container__slide slider-container__slide_1"></div>
+			<div class="slider-section_slider-container__slide slider-container__slide_2"></div>
+			<div class="slider-section_slider-container__slide slider-container__slide_3"></div>
+			<div class="slider-section_slider-container__slide slider-container__slide_4"></div>
+			<div class="slider-section_slider-container__slide slider-container__slide_5"></div>
+			<div class="slider-section_slider-container__slide slider-container__slide_6"></div>
+		    <div class="slider-section__pagination">
+			  <span class="pagination__dot" onclick="currentSlide(1)"></span> 
+			  <span class="pagination__dot" onclick="currentSlide(2)"></span> 
+			  <span class="pagination__dot" onclick="currentSlide(3)"></span> 
+			  <span class="pagination__dot" onclick="currentSlide(4)"></span> 
+			  <span class="pagination__dot" onclick="currentSlide(5)"></span> 
+			  <span class="pagination__dot" onclick="currentSlide(6)"></span> 
+			</div>
+		</div>
+	   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+       </script>
+       <script src="../js.js"></script>
+	</section>
+</body>
+</html>
