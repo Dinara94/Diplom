@@ -1,5 +1,6 @@
 @import '_reset';
 @import '_button';
+@import '_variables';
 
 $color-white: #FFFFFF;
 $color-light: #f6f9fa;
@@ -22,6 +23,8 @@ $color-light: #f6f9fa;
 			font-weight: 400;
 		}
 
+	}
+
     .banner_text {
     	margin-bottom: 35px;
     	font: $color-light;
@@ -37,6 +40,12 @@ $color-light: #f6f9fa;
     		font-size: 17px;
             font-weight: 400;
     	}
-       }
-	  }
+      
+      }
+	  
+        .banner_button {
+
+        	border-color: $color-light;
+        	
+        }
      }

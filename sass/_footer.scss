@@ -1,0 +1,18 @@
+@import '_reset';
+@import '_button';
+@import '_variables';
+
+ .footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  max-width: 1920px;
+  padding: 50px 0px;
+  background-color: #28282e;
+  color: #76767b;
+  font-family: "Proxima Nova";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.97px;
+   }

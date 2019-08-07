@@ -1,0 +1,144 @@
+@import '_reset';
+@import '_button';
+@import '_variables';
+
+
+.section-team {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+max-width: 1920px;
+background-color: #f6f6f6;
+padding: 150px 20px 250px 200px;
+
+.team_text {
+    width: 30%;
+    margin-top: -70px;
+    margin-right: 150px;
+  }
+
+    .team_text__title {
+    color: #333333;
+    font-family: "Open Sans";
+    font-size: 53px;
+    font-weight: 700;
+    line-height: 72px;
+    text-transform: uppercase;
+   }
+
+   .team_text__subtitle {
+    color: #ef443a;
+    font-family: Merriweather;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 10px 0px 30px 50px;
+   }
+
+   .team_text__description {
+    color: #888888;
+    font-family: "Proxima Nova";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+   }
+
+  .team-wrapper {
+    width: 65%;
+    position: relative;
+    margin-top: -50px;
+
+    .team_member-item {
+      position: absolute;
+      width: 180px;
+      height: 180px; 
+      background-size: cover;
+      overflow: hidden;
+
+      .team_member-item_image-5 {
+      background-image: url('../img/Layer_5.png');
+      top: 210px;
+      left: -95px;
+    }
+    .team_member-item_image-6 {
+      background-image: url('../img/Layer_6.png');
+      top: 105px;
+      left: 0px;
+    }
+    .team_member-item_image-7 {
+      background-image: url('../img/Layer_7.png');
+      top: 0px;
+      left: 95px;
+    }
+    .team_member-item_image-8 {
+      background-image: url('../img/Layer_8.png');
+      top: 210px;
+      left: 93px;
+    }
+    .team_member-item_image-9 {
+      background-image: url('../img/Layer_9.png');
+      top: 105px;
+      left: 187px;
+    }
+    .team_member-item_image-10 {
+      background-image: url('../img/Layer_10.png');
+      top: 0px;
+      left: 280px;
+    }
+    .team_member-item_image-11 {
+      background-image: url('../img/Layer_11.png');
+      top: 105px;
+      left: 375px;
+    }
+    .team_member-item_image-12 {
+      background-image: url('../img/Layer_12.png');
+      top: 0px;
+      left: 470px;
+    }
+
+      .team_member-item__description {
+      display: none;
+      border: 90px solid transparent; 
+      border-top: 90px solid #ef4035;
+      margin-top: 180px;
+      position: relative;
+      opacity: 0.9;
+      color: #ffffff;
+      text-align: center;
+      margin-bottom: -20px;
+      transition: 2s ease-in-out;
+
+    }
+
+    .team_member-item__description_bold {
+      position: absolute;
+      width: 100px;
+      top: -77px;
+      left:-45px;
+      font-family: "Proxima Nova";
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .team_member-item__description_normal {
+      width: 100px;
+      position: absolute;
+      top: -65px;
+      left: -48px;
+      font-family: Merriweather;
+      font-size: 13px;
+      font-weight: 400;
+     }
+    }
+
+     .team_member-item:hover >.team_member-item__description {
+      display: block;
+      -ms-transform: translateY(-90px); 
+      -webkit-transform: translateY(-90px);
+      transform: translateY(-90px);
+      transition: 2s ease-in-out;
+    }
+
+  }
+
+}
