@@ -1,51 +1,193 @@
-@import '_reset';
-@import '_button';
-@import '_variables';
-
-$color-white: #FFFFFF;
-$color-light: #f6f9fa;
-
 .banner {
-	max-width: 1920px;
-	background-image: url("../img/banner.png");
-	background-size: cover;
-	padding: 60px 350px 280px;
-	font-family: "Proxima Nova";
+max-width: 1920px;
+background-image: url("../img/banner.png");
+background-size: cover;
+padding: 60px 150px 280px;
+font-family: "Proxima Nova";
+color: #f6f9fa;
 
-	.banner_logo {
+.banner_logo {
 
-		margin-bottom: 200px;
+	margin-bottom: 100px;
 
-		.banner_logo__image, .banner_logo__text {
-			display: inline-block;
-			margin: 10px;
-			font: $color-white 13px;
-			font-weight: 400;
-		}
+	.banner_logo__image, .banner_logo__text {
+		display: inline-block;
+		margin: 10px;
+		font-size: 13px;
+		font-weight: 400;
+	}
+
+}
+
+.banner_text {
+	margin-bottom: 35px;
+	color: #f6f9fa;
+
+	.banner_text__title {
+
+		font-family: "Open Sans";
+        font-size: 48px;
+        font-weight: 300;
+        max-width: 500px;
+        margin-bottom: 50px;
 
 	}
 
-    .banner_text {
-    	margin-bottom: 35px;
-    	font: $color-light;
+	.banner_text__description {
+		font-size: 17px;
+        font-weight: 400;
+        max-width: 500px;
+        line-height: 24px;
+	}
 
-    	.banner_text__title {
+	.banner_text__description:after {
+		content: "";
+		display:block;
+		width: 25px;
+		height: 2px;
+		background-color: #f6f9fa;
+		margin-top: 20px;
+	} 
+  }
+  
+    .banner_button {
+    	border-color: #f6f9fa;
+        color: #f6f9fa;    	
+    }
 
-    		font: "Gotham Rounded" 48px;
-            font-weight: 300;
+    .banner_button:hover {
+    	background-color: #f6f9fa;
+        color: #000000;    	
+    }
+ }
 
-    	}
+@media only screen and (max-device-width:320px) {
+	.banner {
+	padding: 20px;
+	width:100vw;
+	}
+}
 
-    	.banner_text__description {
-    		font-size: 17px;
-            font-weight: 400;
-    	}
-      
-      }
+@media only screen and (max-device-width: 1366px) {
+.banner {
+	padding: 40px 0px;
+	max-width: 1366px;
+
+	.banner_logo {
+
+		margin-bottom: 40px;
+
+	.banner_logo__text {
+
+		font-size: 23px;
+		}
+	}
+
+	.banner_text {
+		display: block;
+		width:100%;
+		margin: 0px auto 50px;
+		text-align:center;
+
+		.banner_text__title {
+	        text-align:center;
+	        font-size: 50px;
+	        max-width: 500px;
+	        margin-bottom: 50px;
+	        line-height: 135%;
+		}
+
+		.banner_text__description {
+			font-size: 25px;
+			margin:0;
+			line-height: 135%;
+		}
+
+		.banner_text__description:after {
+			display:none;
+		} 
+	  }
 	  
-        .banner_button {
+	    .banner_button {
+    	width: 150px;
+    	margin-bottom: 50px;
+	    }
+  	}
+}
 
-        	border-color: $color-light;
-        	
-        }
-     }
+@media only screen and (max-device-width: 768px) {
+	.banner {
+	max-width: 768px;
+	padding: 20px 0px;
+
+	.banner_logo {
+
+		margin-bottom: 60px;
+	}
+
+	.banner_text {
+		width:80%;
+		margin: 30px auto;
+		text-align:center;
+
+		.banner_text__title {
+	        text-align:center;
+	        font-size: 30px;
+	        max-width: 500px;
+	        margin-bottom: 30px;
+	        line-height: 125%;
+		}
+		.banner_text__description {
+			font-size: 12px;
+			margin:0;
+		}
+		.banner_text__description:after {
+			display:none;
+		} 
+	  }	  
+	    .banner_button {
+	    	display: block;
+	    	width: 140px;
+	    	margin: 30px auto;
+	    }
+	  }
+}
+
+@media only screen and (max-device-width: 480px) {
+	.banner {
+	padding: 20px 0px;
+	max-width: 480px;
+
+	.banner_logo {
+
+		margin-bottom: 60px;
+	}
+
+	.banner_text {
+		display: block;
+		width:80%;
+		margin: 30px auto;
+		text-align:center;
+
+		.banner_text__title {
+	        text-align:center;
+	        font-size: 30px;
+	        max-width: 500px;
+	        margin-bottom: 30px;
+	        line-height: 125%;
+		}
+		.banner_text__description {
+			font-size: 12px;
+			margin:0;
+		}
+		.banner_text__description:after {
+			display:none;
+		} 
+	  }	  
+	    .banner_button {
+	    	display: block;
+	    	width: 140px;
+	    	margin: 30px auto;
+	    }
+	  }
+}

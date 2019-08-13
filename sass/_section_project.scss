@@ -1,11 +1,7 @@
-@import '_reset';
-@import '_button';
-@import '_variables';
-
 .project {
   max-width: 1920px;
   background-color: #28282e;
-  padding: 100px 200px; 
+  padding: 200px; 
   color: #ffffff;
 
   .project_title {
@@ -14,7 +10,17 @@
   font-weight: 700;
   line-height: 72px;
   letter-spacing: 0.53px;
+  margin-bottom: 50px;
   }
+
+  .project_title:after {
+  content: "";
+  display:block;
+  width: 25px;
+  height: 2px;
+  background-color: #ffffff;
+  margin-top: 20px;
+  } 
 
   .project_description {
   max-width: 50%;
@@ -35,6 +41,11 @@
   text-transform: uppercase;
   font-size: 14px;
   font-family: "Proxima Nova - Semibold";
+  }
+
+  .project_button:hover {
+   background-color: #ffffff; 
+   color: #28282e;
   }
 
   .project_laptop {
@@ -71,10 +82,14 @@
 
   .project_laptop_icon-container {
   position: absolute;
-  bottom: -75%;
-  left: 21%;
-  width: 80%;
+  bottom: -53%;
+  left: 20%;
+  width: 100%;
   margin: 30px auto;
+
+  .icon_mobile, .icon_tablet, .icon_laptop {
+  display: inline;
+  }
 
   .project_icon-container__icon {
   display: inline;
@@ -101,12 +116,9 @@
 .project_laptop_pagination__item:hover {
   opacity: 1;
   transition: ease-in-out 0.7s;
+   }
   }
-
  }
-
-}
-
 }
 
 .clearfix:after {
@@ -115,4 +127,200 @@
   display: block;
   height: 0;
   clear: both;
+}
+
+@media only screen and (max-device-width: 1366px) {
+.project {
+  padding: 100px 100px 200px 120px;
+
+  .project_title {
+  font-size: 30px;
+  margin-bottom: 50px;
+  }
+
+  .project_title:after {
+  display:none;
+  } 
+
+  .project_description {
+  max-width: 40%;
+  font-size: 16px;
+  }
+
+  .project_laptop {
+  width: 40%;
+  height: 17vh;
+
+  .project_laptop__screen {
+  height: 17vh;
+  }
+
+  .project_laptop_icon-container {
+  bottom: -49%;
+  left: 21%;
+  width: 80%;
+  margin: 30px auto;
+
+  .project_icon-container__icon {
+  margin: 0 15px;
+    }
+   }
+  }
+ }
+}
+
+@media only screen and (max-device-width: 768px) {
+  .project {
+  max-width: 768px;
+  padding: 70px 0px;
+
+  .project_title {
+  font-size: 30px;
+  margin-bottom: 50px;
+  }
+
+  .project_title:after {
+  display:none;
+  } 
+
+  .project_description {
+  max-width: 40%;
+  font-size: 16px;
+  }
+
+  .project_laptop {
+  width: 40%;
+  height: 17vh;
+  margin-top:-163px;
+
+  .project_laptop__screen {
+  height: 17vh;
+  }
+
+  .project_laptop_icon-container {
+  bottom: -53%;
+  left: 21%;
+  width: 80%;
+  margin: 30px auto;
+
+
+  .project_icon-container__icon {
+  margin: 0 8px;
+   }
+  }
+
+  .project_laptop_pagination  {
+  display:none;
+    }
+   }
+  }
+}
+
+@media only screen and (max-device-width: 480px) {
+  .project {
+  max-width: 480px;
+  padding: 20px 0px; 
+  text-align:center;
+
+  .project_title {
+  font-size: 20px;
+  margin-bottom: 20px;
+  }
+
+  .project_title:after {
+    display:none;
+  } 
+
+  .project_description {
+  width: 100%;
+  font-size: 10px;
+  margin: 20px 150px 20px 20px;
+  }
+
+  .button {
+  margin: 50px auto;
+  }
+
+  .project_laptop {
+  border:none;
+  background-color: transparent;
+  padding: 10px;
+  width: 27%;
+  height: 24vh;
+  float: none;
+  margin-top: -140px;
+
+  .project_laptop__screen {
+   display:none;
+  }
+
+  .project_laptop__screen:before {
+  display:none;
+  }
+
+  .project_laptop_icon-container {
+  bottom: 255px;
+  left: 150%;
+  width: 50%;
+  margin: 0 auto;
+
+  .project_icon-container__icon {
+  display:inline-block;
+  margin: 5px;
+   }
+
+   .icon_mobile {
+   position: relative;
+   width: 40px;
+   height: 60px;
+   }
+
+   .icon_mobile:after {
+   position: absolute;
+   top: 19px;
+   left: 45px;
+   display: inline-block;
+   content: "Mobile";
+   font-size: 18px;
+   color: #ffffff;
+   }
+
+  .icon_tablet {
+   position: relative;
+   width: 60px;
+   height: 60px;
+   }
+
+  .icon_tablet:after {
+   position: absolute;
+   top: 16px;
+   left: 52px;
+   display: inline-block;
+   content: "Tablet";
+   font-size: 18px; 
+   color: #ffffff;
+   }
+
+ .icon_laptop {
+   position: relative;
+   width: 98px;
+   height: 66px;
+   }
+
+  .icon_laptop:after {
+   position: absolute;
+   top: 17px;
+   left: 90px;
+   display: inline-block;
+   content: "Desktop";
+   font-size: 18px;
+   color: #ffffff;
+   }
+  }
+
+  .project_laptop_pagination  {
+  display:none;
+   }
+  }
+ }
 }

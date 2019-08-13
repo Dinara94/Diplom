@@ -12,7 +12,6 @@ const gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     fileinclude = require('gulp-file-include'),
     browserSync = require('browser-sync').create();
-
 // запуск сервера
 gulp.task('server', function() {
     browserSync.init({
@@ -21,18 +20,13 @@ gulp.task('server', function() {
         },
         port: "7777"
     });
-
     gulp.watch(['./**/*.html']).on('change', browserSync.reload);
-
-
     gulp.watch([
         './templates/**/*.html',
         './pages/**/*.html'
     ], ['fileinclude']);
-
     gulp.watch('./sass/**/*', ['sass']);
 });
-
 // компіляція sass/scss в css
 gulp.task('sass', function() {
     gulp.src(['./sass/**/*.scss', './sass/**/*.sass'])
@@ -46,7 +40,6 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('./css/'))
         .pipe(browserSync.stream());
 });
-
 // збірка сторінки з шаблонів
 gulp.task('fileinclude', function() {
     gulp.src('./pages/**/*.html')
@@ -57,7 +50,6 @@ gulp.task('fileinclude', function() {
         .on('error', notify.onError())
         .pipe(gulp.dest('./'))
 });
-
 // зтиснення svg, png, jpeg
 gulp.task('minify:img', function() {
     // беремо всі картинки крім папки де лежать картинки для спрайту
@@ -65,7 +57,6 @@ gulp.task('minify:img', function() {
         .pipe(imagemin().on('error', gutil.log))
         .pipe(gulp.dest('./public/images/'));
 });
-
 // зтиснення css
 gulp.task('minify:css', function() {
     gulp.src('./css/**/*.css')
@@ -76,19 +67,16 @@ gulp.task('minify:css', function() {
         .pipe(csso())
         .pipe(gulp.dest('./public/css/'));
 });
-
 // зтиснення html
 gulp.task('minify:html', function() {
     var opts = {
         conditionals: true,
         spare: true
     };
-
     return gulp.src(['./*.html'])
         .pipe(minifyHTML(opts))
         .pipe(gulp.dest('./public/'));
 });
-
 // створення спрайту з картинок з папки images/sprite
 gulp.task('sprite', function() {
     var spriteData = gulp.src('images/sprite/*.png').pipe(
@@ -100,13 +88,10 @@ gulp.task('sprite', function() {
             }
         })
     );
-
-    var imgStream = spriteData.img.pipe(gulp.dest('images/'));
+    var imgStream = spriteData.img.pipe(gulp.dest('img/'));
     var cssStream = spriteData.css.pipe(gulp.dest('sass/'));
-
     return merge(imgStream, cssStream);
 });
-
 // при виклику в терміналі команди gulp, буде запущені задачі
 // server - для запупуску сервера,
 // sass - для компіляції sass в css, тому що браузер
@@ -114,4 +99,3 @@ gulp.task('sprite', function() {
 // fileinclude - для того щоб з маленьких шаблонів зібрати повну сторінку
 gulp.task('default', ['server', 'sass', 'fileinclude'])
 gulp.task('production', ['minify:html', 'minify:css', 'minify:img']);
-

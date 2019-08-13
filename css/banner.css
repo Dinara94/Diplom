@@ -1,0 +1,71 @@
+@font-face {
+    font-family: "Gotham Rounded";
+    src: url('../fonts/Gotham rounded/gotham-rounded-book.otf')
+   }
+   @font-face {
+    font-family: "Proxima Nova";
+    src: url('../fonts/Proxima Nova/ProximaNova-Regular.ttf');
+   }
+   @font-face {
+    font-family: "Proxima Nova-Semibold";
+    src: url('../fonts/Proxima Nova/ProximaNova-Semibold.ttf');
+   }
+
+
+
+.banner {
+	max-width: 1920px;
+	background-image: url("../img/banner.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+	padding: 60px 150px 280px;
+	font-family: "Proxima Nova";
+}
+
+	.banner_logo {
+
+		margin-bottom: 200px;
+    }
+
+		.banner_logo__image, .banner_logo__text {
+			display: inline-block;
+			margin: 10px;
+			font-size: 13px;
+			font-weight: 400;
+            color: #FFFFFF;
+            font-family: "Proxima Nova";
+	}
+
+    .banner_text {
+    	margin-bottom: 35px;
+    	color: #f6f9fa;
+    }
+
+    	.banner_text__title {
+            max-width: 590px;
+    		font: "Gotham Rounded" 48px;
+            font-weight: 300;
+            margin-bottom: 70px;
+
+    	}
+
+    	.banner_text__description {
+            max-width: 590px;
+    		font-size: 17px;
+            font-weight: 400;
+            font-family: "Proxima Nova";
+    	}
+	  
+        .banner_button {
+
+            width: 157px;
+            height: 60px;
+            color: #f6f9fa;
+            border: 2px solid #f6f9fa;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-family: "Proxima Nova-Semibold";
+        }
+
+
+     

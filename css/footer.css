@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Gotham Rounded";
+  src: url('../fonts/Gotham rounded/gotham-rounded-book.otf')
+ }
+ @font-face {
+  font-family: "Proxima Nova";
+  src: url('../fonts/Proxima Nova/ProximaNova-Regular.ttf');
+ }
+ @font-face {
+  font-family: "Proxima Nova-Semibold";
+  src: url('../fonts/Proxima Nova/ProximaNova-Semibold.ttf');
+ }
+ @font-face {
+  font-family: "Open Sans";
+  src: url('../fonts/Open Sans/OpenSans-Regular.ttf');
+ }
+ @font-face {
+  font-family: "Merriweather";
+  src: url('../fonts/Merriweather/Merriweather-Regular.ttf');
+ }
+
+ .footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  max-width: 1920px;
+  padding: 50px 0px;
+  background-color: #28282e;
+  color: #76767b;
+  font-family: "Proxima Nova";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.97px;
+   }

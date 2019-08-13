@@ -1,0 +1,133 @@
+@font-face {
+  font-family: "Gotham Rounded";
+  src: url('../fonts/Gotham rounded/gotham-rounded-book.otf')
+ }
+ @font-face {
+  font-family: "Proxima Nova";
+  src: url('../fonts/Proxima Nova/ProximaNova-Regular.ttf');
+ }
+ @font-face {
+  font-family: "Proxima Nova-Semibold";
+  src: url('../fonts/Proxima Nova/ProximaNova-Semibold.ttf');
+ }
+ @font-face {
+  font-family: "Open Sans";
+  src: url('../fonts/Open Sans/OpenSans-Regular.ttf');
+ }
+ @font-face {
+  font-family: "Merriweather";
+  src: url('../fonts/Merriweather/Merriweather-Regular.ttf');
+ }
+
+.project {
+  max-width: 1920px;
+  background-color: #28282e;
+  padding: 100px 200px; 
+  color: #ffffff;
+}
+
+.clearfix:after {
+  content: " "; 
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.project_title {
+  font-family: "Open Sans";
+  font-size: 53px;
+  font-weight: 700;
+  line-height: 72px;
+  letter-spacing: 0.53px;
+}
+
+.project_description {
+  max-width: 50%;
+  font-family: "Proxima Nova";
+  text-align: justify;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.button {
+  width: 157px;
+  height: 60px;
+  margin-top: 50px;
+  background-color: #28282e;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: "Proxima Nova - Semibold";
+}
+
+.project_laptop {
+  position: relative;
+  padding: 10px;
+  width: 27%;
+  height: 24vh;
+  background-color: #000000;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  float: right;
+  margin-top: -140px;
+}
+
+.project_laptop__screen {
+  background-image: url('../img/screen.png');
+  position: absolute;
+  top: 10px;
+  left: 11px;
+  width: 90%;
+  height: 23vh;
+}
+
+.project_laptop__screen:before {
+  content: "";
+  width: 133%;
+  height: 9px;
+  background-color: #bdbdbd;
+  background-image: linear-gradient(to right, #c4c4c6 0%, #d2d3d5 4%, #d2d3d5 50%, #eaedf1 96%, #eaedf1 100%);
+  position: absolute;
+  border-radius: 1px;
+  bottom: -18px;
+  left: -16% ;
+}
+
+.project_laptop_icon-container {
+  position: absolute;
+  bottom: -75%;
+  left: 21%;
+  width: 80%;
+  margin: 30px auto;
+}
+
+.project_icon-container__icon {
+  display: inline;
+  margin: 0 5px;
+}
+
+.project_laptop_pagination  {
+  width: 10px;
+  height: 40%;
+  position: absolute;
+  right: -60px;
+  top: 65px;
+}
+
+.project_laptop_pagination__item {
+  width: 4px;
+  height: 25px;
+  margin: 10px auto;
+  background-color: #ffffff;
+  opacity: 0.2;
+  transition: ease-in-out 0.7s;
+}
+
+.project_laptop_pagination__item:hover {
+  opacity: 1;
+  transition: ease-in-out 0.7s;
+}
+

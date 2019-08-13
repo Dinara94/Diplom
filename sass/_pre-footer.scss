@@ -1,7 +1,4 @@
-@import '_reset';
-@import '_variables';
-
- .pre-footer {
+.pre-footer {
   width: 100%;
   background-color: #ef4035;
   padding: 50px 0px;
@@ -15,5 +12,41 @@
   line-height: 22px;
  }
 
-
+ .pre-footer-text:hover {
+  text-decoration: underline;
  }
+}
+
+@media only screen and (max-device-width: 1366px) {
+.pre-footer {
+  max-width: 1366px;
+  padding: 40px 0px;
+
+    .pre-footer-text {
+    font-size: 15px;
+    }
+  }
+}
+
+@media only screen and (max-device-width: 768px) {
+.pre-footer {
+  max-width: 768px;
+  padding: 20px 0px;
+
+    .pre-footer-text {
+    font-size: 10px;
+    }
+  }
+}
+
+
+@media only screen and (max-device-width: 480px) {
+.pre-footer {
+  max-width: 480px;
+  padding: 10px 0px;
+
+    .pre-footer-text {
+    font-size: 10px;
+    }
+  }
+}
